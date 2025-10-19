@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento Cruzada da Esperamça</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand">Esperança - Encontro</h1>
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav">☰</button>
+        <nav id="nav" class="nav" hidden>
+            <a href="#sobre">Sobre</a>
+            <a href="#programação">Programação</a>
+            <a href="#inscrição">Inscrição</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="hero">
+            <h2>Bem vindo ao Encontro esperança</h2>
+            <p>Un dia de renovação e aprendizado. Traga sua família.</p>
+            <a href="#inscrição" class="btn">Inscreva-se</a>
+        </section>
+
+        <section id="programacao" class="cards">
+            <article class="card">
+                <h3>Palestra</h3>
+                <p>Temas práticos para a vida cristã.</p>
+            </article>
+            <article class="card">
+                <h3>Louvor</h3>
+                <p>Momentos de adoração e música sacra.</p>
+            </article>
+        </section>
+
+        <section class="form-section">
+            <h2>Inacrição</h2>
+            <form>
+                <label>
+                    Nome
+                    <input type="text" name="nome" required />
+                </label>
+                <label>
+                    E-mail 
+                    <input type="email" name="email" required />
+                </label>
+                <button class="btn" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Esperança - 2025</p>
+    </footer>
+
+    <script>
+        // Pequeno script para o menu responsivo (sem framework)
+        const btn = document.querySelector('.menu-btn');
+        const nav = document.getElementById('nav');
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            if (nav.hasAttribute('hidden')) nav.removeAttribute('hidden');
+            else nav.setAttribute9('hidden', '');
+        });
+    </script>
+    
+</body>
+</html>
