@@ -1,0 +1,119 @@
+:root{
+    --gap: 1rem;
+    --max-width: 900px;
+    --brand: #ff11ff;
+}
+/* RESET mínimo */
+*{
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+}
+body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.4;
+    margin: 0;
+    padding: var(--gap);
+    color: #111;
+    background: #fff;
+}
+
+/* Layout mobile */
+.site-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+}
+.brand{
+    font-size: 1.1rem;
+}
+.menu-btn{
+    font-size: 1.2rem;
+    background: none;
+    border: 0;
+}
+
+/* Hero */
+.hero{
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #f7fff9, #eaf7f0);
+}
+.hero h2{
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+.btn{
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 600;
+}
+/* Cards grid (mobile: stack) */
+.cards{
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.75rem;
+}
+.card{
+    padding: 0.8rem;
+    border-radius: 10px;
+    background: #fbfbfb;
+    border: 1px solid #eee;
+}
+/* Form */
+.form-section{
+    margin-top: 1rem;
+}
+form label{
+    display: block;
+    margin-bottom: 0.6rem;
+}
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+/* Footer */
+.site-footer{
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+/* Larger screens (simple breakpoints) */
+@media(min-width: 700px){
+    body{
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .site-header{
+        gap: 2rem;
+    }
+    .menu-btn{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        gap: 1rem;
+    }
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
